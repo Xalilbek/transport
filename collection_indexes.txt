@@ -1,0 +1,120 @@
+Collection indexes:
+
+
+Alerts:
+db.alerts.dropIndexes()
+db.alerts.createIndex( {is_deleted : 1 } )
+db.alerts.createIndex( {business_id : 1 } )
+db.alerts.createIndex( {user_id : 1 } )
+db.alerts.createIndex( {created_at : 1 } )
+
+
+Damages:
+db.damages.dropIndexes()
+db.damages.createIndex( {is_deleted : 1 } )
+db.damages.createIndex( {business_id : 1 } )
+db.damages.createIndex( {parent_id : 1 } )
+db.damages.createIndex( {creator_id : 1 } )
+db.damages.createIndex( {created_at : 1 } )
+
+Geo Objects:
+db.geoobjects.dropIndexes()
+db.geoobjects.createIndex( {is_deleted : 1 } )
+db.geoobjects.createIndex( {geometry : "2dsphere" } )
+db.geoobjects.createIndex( {business_id : 1 } )
+db.geoobjects.createIndex( {user_id : 1 } )
+db.geoobjects.createIndex( {created_at : 1 } )
+
+History:
+db.history.dropIndexes()
+db.history.createIndex( {is_deleted : 1 } )
+db.history.createIndex( {geometry : "2dsphere" } )
+db.history.createIndex( {business_id : 1 } )
+db.history.createIndex( {object_id : 1 } )
+db.history.createIndex( {created_at : 1 } )
+
+Logs Tracking:
+db.logs_tracking.dropIndexes()
+db.logs_tracking.createIndex( {is_deleted : 1 } )
+db.logs_tracking.createIndex( {geometry : "2dsphere" } )
+db.logs_tracking.createIndex( {business_id : 1 } )
+db.logs_tracking.createIndex( {object_id : 1 } )
+db.logs_tracking.createIndex( {created_at : 1 } )
+db.logs_tracking.createIndex( {history_id : 1 } )
+
+Logs Tracking Raw:
+db.logs_tracking.dropIndexes()
+db.logs_tracking.createIndex( {business_id : 1 } )
+db.logs_tracking.createIndex( {created_at : 1 } )
+
+Logs Unknown Tracking:
+db.logs_tracking.dropIndexes()
+db.logs_tracking.createIndex( {is_deleted : 1 } )
+db.logs_tracking.createIndex( {geometry : "2dsphere" } )
+db.logs_tracking.createIndex( {created_at : 1 } )
+db.logs_tracking.createIndex( {history_id : 1 } )
+
+Notifications:
+db.notifications.dropIndexes()
+db.notifications.createIndex( {users : 1 } )
+db.notifications.createIndex( {object_id : 1 } )
+db.notifications.createIndex( {alert_id : 1 } )
+db.notifications.createIndex( {geometry : "2dsphere" } )
+db.notifications.createIndex( {created_at : 1 } )
+db.notifications.createIndex( {history_id : 1 } )
+
+
+Objects:
+db.objects.dropIndexes()
+db.objects.createIndex( {users : 1 } )
+db.objects.createIndex( {is_deleted : 1 } )
+db.objects.createIndex( {imei : 1 } )
+db.objects.createIndex( {geometry : "2dsphere" } )
+db.objects.createIndex( {created_at : 1 } )
+db.objects.createIndex( {connected_at : 1 } )
+db.objects.createIndex( {last_history_id : 1 } )
+db.objects.createIndex( {vehicle_id : 1 } )
+
+
+Pallets:
+db.pallets.dropIndexes()
+db.pallets.createIndex( {is_deleted : 1 } )
+db.pallets.createIndex( {business_id : 1 } )
+db.pallets.createIndex( {creator_id : 1 } )
+db.pallets.createIndex( {employee_id : 1 } )
+db.pallets.createIndex( {created_at : 1 } )
+
+
+Tracking Statistics:
+db.tracking_statistics.dropIndexes()
+db.tracking_statistics.createIndex( {business_id : 1 } )
+db.tracking_statistics.createIndex( {object_id : 1 } )
+db.tracking_statistics.createIndex( {created_at : 1 } )
+
+
+
+User Vehicles:
+db.user_vehicles.dropIndexes()
+db.user_vehicles.createIndex( {is_deleted : 1 } )
+db.user_vehicles.createIndex( {business_id : 1 } )
+db.user_vehicles.createIndex( {creator_id : 1 } )
+db.user_vehicles.createIndex( {user_id : 1 } )
+db.user_vehicles.createIndex( {vehicle_id : 1 } )
+db.user_vehicles.createIndex( {created_at : 1 } )
+
+
+Vehicles:
+db.vehicles.dropIndexes()
+db.vehicles.createIndex( {is_deleted : 1 } )
+db.vehicles.createIndex( {business_id : 1 } )
+db.vehicles.createIndex( {creator_id : 1 } )
+db.vehicles.createIndex( {created_at : 1 } )
+
+
+Work Time Exceptions:
+db.work_time_exceptions.dropIndexes()
+db.work_time_exceptions.createIndex( {is_deleted : 1 } )
+db.work_time_exceptions.createIndex( {business_id : 1 } )
+db.work_time_exceptions.createIndex( {user_id : 1 } )
+db.work_time_exceptions.createIndex( {created_at : 1 } )
+db.work_time_exceptions.createIndex( {crm_type : 1 } )
